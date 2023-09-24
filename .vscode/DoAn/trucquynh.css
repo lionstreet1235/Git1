@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #f0f0f0;
+    --secondary-color: #333333;
+    --tertiary-color: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    max-height: auto;
+    
+}
+
+.logo {
+    width: auto;
+    height: 60px;
+    margin-left: 30px;
+    
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row-reverse; 
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-family: 'Helvetica'; 
+}
+
+.banner {
+    position: relative; 
+    height: 600px;
+    background-image: url("banner.jpg"); 
+    background-size: cover;
+    background-position: center;
+}
+
+.banner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.banner-text {
+position: relative; 
+color: white;
+font-size: 30px;
+text-align: left; 
+padding-left: 50px; 
+padding-top: 200px;
+}
+
+.banner-text-second { /* Tạo một lớp mới cho đoạn văn thứ hai */
+position: relative; 
+color: white;
+font-size: 90px; /* Kích thước chữ mới */
+font-family:'Palatino'; /* Font chữ mới */
+text-align: left; 
+padding-left: 50px; 
+padding-top: 15px; /* Vị trí mới của văn bản */
+width:60%
+}
+.banner-button {
+position: relative; 
+color: white; /* Màu chữ */
+background-color: #6AB43E; /* Màu nền */
+font-size: 20px; /* Kích cỡ chữ */
+padding: 10px 20px; /* Padding cho nút */
+margin-top: 20px; /* Khoảng cách từ đoạn văn thứ hai */
+margin-left: 50px; /* Dời nút sang phải */
+border: aliceblue; /* Loại bỏ viền */
+border-radius: 12px; /* Làm tròn góc của nút */
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng cho nút */
+cursor: pointer; /* Thay đổi con trỏ khi di chuột qua nút */
+}
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6AB43E; /* Màu nền mới cho bảng */
+    color: var(--secondary-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height:auto;
+    width:auto;
+}
+.info-box .rectangle{
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #6AB43E;
+    color: var(--primary-color);
+    word-wrap: break-word; /* Cho phép văn bản tự động xuống hàng */
+    max-width: 70%;
+    width:max-content;
+    position: relative;
+}
+.info-box .rectangle h2 {
+    margin-bottom: 10px;
+    font-size:25px
+}
+.info-box .rectangle p {
+    font-size: 19px; /* Điều chỉnh kích thước chữ của đoạn văn */
+}
+.info-box .rectangle button {
+margin-top: 10px;
+padding: 10px 20px;
+background-color: transparent; /* Loại bỏ màu nền */
+color:#f0f0f0;
+border: 2px solid white; /* Thêm khung viền màu trắng */
+border-radius: 12px 15px;
+cursor: pointer;
+box-shadow: 0px;
+position: absolute; /* Thêm vị trí tuyệt đối cho nút */
+bottom: 10px;
+}
+
+/* Loại bỏ margin-left cho hình chữ nhật đầu tiên */
+.info-box .rectangle:first-child {
+    margin-left: 0;
+}
+.logo-middlepage{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+
+}
+.logo-middlepage img {
+    max-width: 50px;
+    max-height: 50px;
+}
+.containter1{
+    width: 80%;
+    border-collapse: collapse;
+}
+.container1 td:nth-child(2) {
+    width: 10%; /* Giới hạn độ rộng của ô chứa văn bản là 70% độ rộng của bảng */
+}
+
+.containter1 td{
+    padding-left: 30px;
+}
+
+.container1 , .container1 h4, .container1 p {
+    margin: 10px 15px; /* Khoảng cách giữa các phần tử văn bản */
+    text-align: justify; /* Căn lề đều hai bên cho văn bản */
+    line-height: 1,9; /* Khoảng cách giữa các dòng văn bản */
+}
+.left1 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#13da27;
+}
+
+.left1 img{
+    width:30%;
+    height:200px;
+}
+
+.left1 button{
+    float:left;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #99cc66;
+    color:#f0f0f0;
+    cursor: pointer;
+    box-shadow: 0px;
+    bottom: 10px;
+    border-radius: 0px 20px 20px 20px;
+    border: 0;
+}
+
+.ctent{
+    float:right;
+    align-items: flex-end;
+}
+.nd img{
+    width: 30px;
+    height:30px;
+}
+
+.nd h3{
+    color:#ff9933;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:left;
+}
+.nd p{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#333333;
+}
+.content {
+   display:flex;  
+   flex-wrap: wrap;
+   justify-content: space-between; 
+   margin-top:20px; 
+}
+
+.card {
+   width :30%; 
+   border :1px solid var(--primary-color); 
+   padding :20px;
+}
+
+.card img {
+   width :100%; 
+   height :200px; 
+   object-fit :cover; 
+}
+
+.card h3 {
+   margin-top :10px; 
+   color :var(--secondary-color); 
+}
+
+.card p {
+   margin-top :10px; 
+   color :var(--tertiary-color); 
+}
+
+.footer {
+   height :100px; 
+   background-color :var(--primary-color); 
+   display:flex; 
+   align-items:center; 
+   justify-content:center; 
+}
+
+.footer p {
+  color :var(--secondary-color);  
+}

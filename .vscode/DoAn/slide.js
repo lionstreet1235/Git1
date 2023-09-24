@@ -1,19 +1,28 @@
-let currentSlide = 0;
-const slide = document.querySelector('.carousel-slide');
-const slides = slide.querySelectorAll('img');
-const slideWidth = slides[0].clientWidth;
+const imgPosition = document.querySelectorAll(".aspect-ratio-169 img");
+const imgContainer = document.querySelector(".aspect-ratio-169");
+const dotItem = document.querySelectorAll(".dot");
+let imgNumber = imgPosition.length;
+let index = 0;
+imgPosition.forEach(function(image, index) {
+    image.style.left = index * 100 + "%";
+    dotItem[index].addEventListener("click", function() {
+        slider(index);
+    })
+});
 
-function moveSlide() {
-  slide.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+function imgSlide() {
+    index++;
+    //console.log(index)
+    if (index >= imgNumber) {
+        index = 0;
+    }
+    slider(index);
 }
 
-function nextSlide() {
-  if (currentSlide >= slides.length - 1) {
-    currentSlide = 0;
-  } else {
-    currentSlide++;
-  }
-  moveSlide();
+function slider(index) {
+    imgContainer.style.left = "-" + index * 100 + "%";
+    const dotActived = document.querySelector('.dot-actived');
+    dotActived.classList.remove("dot-actived");
+    dotItem[index].classList.add("dot-actived");
 }
-
-setInterval(nextSlide, 3000);
+setInterval(imgSlide, 5000);
