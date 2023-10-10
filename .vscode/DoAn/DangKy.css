@@ -1,0 +1,64 @@
+
+form {
+    background-image: url(./images/bg1.jpg);
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 40% !important;
+    width: 40% !important;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.form-group .option-group {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 6px;
+}
+
+.form-group .option-group>input {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.form-group .option-group>span {
+    margin-left: 4px;
+}
+
+input,
+select {
+    background-color: #fff !important;
+}
+
+#loi {
+    font-size: 1em;
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+    text-decoration: underline darkturquoise;
+    margin-bottom: 0.5em;
+}
+
+.form-group .btn-css-before {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    background-color: #fdd425;
+}
+
+.form-group .btn-css-before:hover {
+    -webkit-transform: scale(1.05) translateZ(0);
+    -moz-transform: scale(1.05) translateZ(0);
+    transform: scale(1.05) translateZ(0);
+    transition: opacity .2s ease-in-out, transform .7s, -webkit-transform .7s, -moz-transform .7s;
+    cursor: pointer;
+}
+
+form .btn-container {
+    text-align: center;
+}
